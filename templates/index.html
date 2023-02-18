@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flower Classification</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <h1></h1>
+    <div class="container mt-4">
+      <h2 class="mt-4 mb-4">Flower Classification</h2>
+      <form method="POST" action="http://127.0.0.1:5000">
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label"
+            >Sepal Length</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            placeholder="sepal length (cm)"
+            name="sepal_length"
+            step="0.01"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label"
+            >Sepal Width</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            placeholder="sepal width (cm)"
+            name="sepal_width"
+            step="0.01"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label"
+            >Petal Length</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            placeholder="petal length (cm)"
+            name="petal_length"
+            step="0.01"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label"
+            >Petal Width</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            placeholder="petal width (cm)"
+            name="petal_width"
+            step="0.01"
+          />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Predict</button>
+
+        {% if result %}
+        <h4 class="mt-4 mb-4">The Flower Prediction is {{result}}</h4>
+        {% endif %}
+      </form>
+    </div>
+  </body>
+</html>
